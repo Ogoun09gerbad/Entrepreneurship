@@ -367,3 +367,11 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# Sauvegarder le modèle après l'entraînement
+model.save('corn_disease_model.h5')
+
+# Sauvegarder aussi au format SavedModel
+model.save('corn_disease_model', save_format='tf')
+
+print("Modèle sauvegardé avec succès!")
